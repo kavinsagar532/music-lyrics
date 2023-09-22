@@ -1,0 +1,21 @@
+.nav_link_active{
+    text-decoration:None;
+    font-size: 25px;
+}
+.nav-item{
+    font-size:25px;
+    padding:10px;
+}
+.container{
+    text-align:center;    
+    font-size:200px;
+    padding-top: 8%;
+}
+.col{
+    font-size: 30px;
+}
+.container-2{
+    padding-top:70px ;
+    font-size: 50px;
+    margin-left: 600px;.
+}

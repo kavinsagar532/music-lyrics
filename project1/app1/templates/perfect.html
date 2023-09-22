@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("{% static 'music_background.jpg'%}"); /* Replace with your image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container-3{
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      max-height: 350px;
+      overflow: auto;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      margin: 50px auto;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      line-height: 1.5;
+      background-image: linear-gradient(to right , rgba(190, 63, 245, 0.8),rgba(25, 53, 237, 0.8));
+    }
+    .container-3::-webkit-scrollbar {
+      display: none;
+    }
+    .container {
+      background-color: #c8cfd4;
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+      margin: 50px auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+    .lyrics{
+        padding-left: 620px;
+        text-align: left;
+      margin-top: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <audio controls>
+      <source src="{% static 'Perfect.mp3'%}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="playPause()">Play/Pause</button>
+  </div>
+
+  <script>
+    var audio = document.getElementsByTagName("audio")[0];
+
+    function playPause() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+  <div class="container-3">
+    <p>
+        I found a love, for me<br>
+Darling, just dive right in and follow my lead<br>
+Well, I found a girl, beautiful and sweet<br>
+Oh, I never knew you were the someone waiting for me<br>
+'Cause we were just kids when we fell in love<br>
+Not knowing what it was<br>
+I will not give you up this time<br>
+But darling, just kiss me slow<br>
+Your heart is all I own<br>
+And in your eyes, you're holding mine<br>
+Baby, I'm dancing in the dark<br>
+With you between my arms<br>
+Barefoot on the grass<br>
+Listening to our favourite song<br>
+When you said you looked a mess<br>
+I whispered underneath my breath<br>
+But you heard it<br>
+Darling, you look perfect tonight<br>
+Well, I found a woman, stronger than anyone I know<br>
+She shares my dreams, I hope that someday I'll share her home<br>
+I found a lover, to carry more than just my secrets<br>
+To carry love, to carry children of our own<br>
+We are still kids, but we're so in love<br>
+Fighting against all odds<br>
+I know we'll be alright this time<br>
+Darling, just hold my hand<br>
+Be my girl, I'll be your man<br>
+I see my future in your eyes<br>
+Baby, I'm dancing in the dark<br>
+With you between my arms<br>
+Barefoot on the grass<br>
+Listening to our favorite song<br>
+When I saw you in that dress, looking so beautiful<br>
+I don't deserve this<br>
+Darling, you look perfect tonight<br>
+Baby, I'm dancing in the dark<br>
+With you between my arms<br>
+Barefoot on the grass<br>
+Listening to our favorite song<br>
+I have faith in what I see<br>
+Now I know I have met an angel in person<br>
+And she looks perfect<br>
+I don't deserve this<br>
+You look perfect tonight<br>
+    </p>
+  </div>
+</body>
+</html>

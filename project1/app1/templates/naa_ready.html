@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("{% static 'music_background.jpg'%}"); /* Replace with your image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container-3{
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      max-height: 350px;
+      overflow: auto;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      margin: 50px auto;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      line-height: 1.5;
+      background-image: linear-gradient(to right , rgba(190, 63, 245, 0.8),rgba(25, 53, 237, 0.8));
+    }
+    .container-3::-webkit-scrollbar {
+      display: none;
+    }
+    .container {
+      background-color: #c8cfd4;
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+      margin: 50px auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+    .lyrics{
+        padding-left: 620px;
+        text-align: left;
+      margin-top: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <audio controls>
+      <source src="{% static 'Naa_Ready.mp3'%}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="playPause()">Play/Pause</button>
+  </div>
+
+  <script>
+    var audio = document.getElementsByTagName("audio")[0];
+
+    function playPause() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+  <div class="container-3">
+    <p>
+        Naa Ready Dhaan Varava<br>
+        Annan Naa Erangi Varava<br>
+        
+        Thael Kodukku Singatha<br>
+        Seendaathapa Evan Thaduthum<br>
+        En Route’u Maaraadhappa<br>
+        
+        Na Ready Dhaan Varava<br>
+        Annan Naa Thaniya Varava<br>
+        
+        Thara Nadungura Parai<br>
+        Adikanum Naa Aadathan<br>
+        Veral Idukula Theepandham<br>
+        Naa Yethathan<br>
+        
+        Pathaathu Bottle Naa Kudikka<br>
+        Andala Konda Cheers Adikka<br>
+        Keda Vetti Kondanga Da<br>
+        Yenpasi Naa Thanikka<br>
+        
+        Pogayala Aruvadikku Thayaarana<br>
+        Opponent’a Kalaiyeduthu<br>
+        Thalavaliya Pokkipadhu<br>
+        Enga Thalayeluthu<br>
+        
+        Aadadha Aatam Potta<br>
+        Katti Vachi Koni Le Katti<br>
+        Lorry Le Yethi Arththupoda<br>
+        Anupuduvom Factory Ku Dei<br>
+        
+        Ella Blueprint Um Theriyum<br>
+        Mission Successful’ah Mudiyum<br>
+        Idaye Vandha Unnayum Padayal<br>
+        Veppen Kolasammaikki<br>
+        
+        Adhoda Aadu Sarayam<br>
+        Beedi Suruttu Gang La Illa<br>
+        Poyi Purattu Velayat Pola<br>
+        Vela Nadathum World Wide Link<br>
+        
+        Ey Ella Oorum Namma Rules<br>
+        Uruvadhu Da Namma Tools<br>
+        Aththana Peru Asaivum<br>
+        Orae Mari Sync’u<br>
+        
+        Singles Illa Gumbal<br>
+        Sanda Gelichi Gelichi<br>
+        Kalachi Poiten<br>
+        Paththavachu Pogaya Utta<br>
+        
+        Power Kick!<br>
+        
+        Pogayala Pogayala<br>
+        
+        Power Kick!<br>
+        
+        Milaga Thatti Mutti<br>
+        Kuzhambulla Kothikudhu Paar<br>
+        Andha Kaal Azhagu<br>
+        
+        Adi Dhadi Vettu Kuthu<br>
+        Engal Vettu Samayal Vara<br>
+        Ada Kalanthirukku<br>
+        
+        Kaththi Palla Kaththi Enga<br>
+        Nna Kutha Kaathirukku<br>
+        Adhu Dha Kanakku<br>
+        
+        Indha Kaththi Vera<br>
+        Ragam Vena Sketch’u Enakku<br>
+        Puridha Unakku<br>
+        
+        Milli Ulla Ponaa Podhum<br>
+        Ghilli Vella Varuvan Da<br>
+        Milli Ulla Ponaa Podhum<br>
+        Ghilli Vella Varuvan Paar<br>
+        
+        Oorukull Enakoru Pear Irukku<br>
+        Kettalae Adhirum Paar Unakku<br>
+        Poster Adi Annan Ready<br>
+        Kondadi Koluthanum Di<br>
+        
+        Naa Ey Ann Varar Valivudu<br>
+        Annan Naa Erangi Varava<br>
+        Thael Kodukku Singatha<br>
+        Seendaathapa Evan Thaduthum<br>
+        En Route’u Maaraadhappa<br>
+        
+        Naan Ready Dhaan Varava<br>
+        Annan Naa Thaniya Varava<br>
+        
+        Thara Nadungura Parai<br>
+        Adikanum Naa Aadathan<br>
+        Veral Idukula Theepandham<br>
+        Naa Yethathan<br>
+        
+        Pathaathu Bottle Naa Kudikka<br>
+        Andala Konda Cheers Adikka<br>
+        Keda Vetti Kondanga Da<br>
+        Yenpasi Naa Thanikka<br>
+        
+    </p>
+  </div>
+</body>
+</html>

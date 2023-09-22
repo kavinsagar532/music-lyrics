@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("{% static 'music_background.jpg'%}"); /* Replace with your image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container-3{
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      max-height: 350px;
+      overflow: auto;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      margin: 50px auto;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      line-height: 1.5;
+      background-image: linear-gradient(to right , rgba(190, 63, 245, 0.8),rgba(25, 53, 237, 0.8));
+    }
+    .container-3::-webkit-scrollbar {
+      display: none;
+    }
+    .container {
+      background-color: #c8cfd4;
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+      margin: 50px auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+    .lyrics{
+        padding-left: 620px;
+        text-align: left;
+      margin-top: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <audio controls>
+      <source src="{% static 'Nira.mp3'%}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="playPause()">Play/Pause</button>
+  </div>
+
+  <script>
+    var audio = document.getElementsByTagName("audio")[0];
+
+    function playPause() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+  <div class="container-3">
+    <p>
+        Niraa niraa nee en niraa,<br>
+thiraa thiraa ninaithiraa.<br>
+Nodi sugam tharaa,<br>
+
+vazhi yugam vidaa.<br>
+
+Vizhiyilae oru keeralae,<br>
+vizhundhaathae theriyaamalae.<br>
+Tharaiyilae nizhal veguthae,<br>
+thanimayai ariyaamalae.<br>
+
+Ninaivugal vilaiyaaduthae,<br>
+nijam adhu puriyaamalae.<br>
+Idhazhgalum thirakaamalae,<br>
+idhayangal inainthida uyir pizhidhidum.<br>
+Pogaathae azhagae,<br>
+ini thaangaathae uyirae.<br>
+Enai thondaathae thimirae,<br>
+pagal vesham podaathae.<br>
+Unai theeramal pidithen,<br>
+uyirin ullae maraithen,<br>
+veliyil konjam nadithenae...<br>
+
+Niraa niraa nee en niraa,<br>
+thiraa thiraa ninaithiraa.<br>
+Nodi sugam tharaa,<br>
+vazhi yugam vidaa.<br>
+
+
+Niraa!<br>
+Thiraa!<br>
+Niraa, thiraa, niraa!<br>
+
+Nodigal thaavi odum,<br>
+mutkalodu sandaiyittu,<br>
+vandha padhai poga solli,<br>
+netrai meendum ketten.<br>
+Urugi urugi neeyum,<br>
+ularipona vaarthai yaavum,<br>
+nyabagathil thedi thedi,<br>
+kadhil kettu paarthen.<br>
+urangi pona tharunam thannai,<br>
+padam piditha minnalodu,<br>
+pugai padangal ketten.<br>
+Udhadum udhadum,<br>
+urasi uyir paritha,<br>
+saththam yaavum padhivu seidhu,<br>
+serthu vaitha ilaigal thulaiyil,<br>
+etti paarthen.<br>
+Mezhugin thiriyil eriyum,<br>
+theeyai vandhaai.<br>
+Mezhugin udalai mella,<br><br>
+yeno thindraai.<br>
+Undhan moochu kaatrai,<br>
+oodhi ponaai pizhaithiduven adi.<br>
+Tharaiyil thavazhum kaadhal,<br>
+paarthaal enna.<br>
+Konjam pesi pesi,<br>
+theerthaal enna.<br>
+Indha kaalam neram ellaam,<br>
+oru murai kanavaai kalainthiduma...<br>
+Unai theeramal pidithen,<br>
+uyirin ullae maraithen,<br>
+veliyil konjam nadithenae.<br>
+
+Vizhiyilae oru keeralae,<br>
+vizhundhaathae theriyaamalae.<br>
+Tharaiyilae nizhal veguthae,<br>
+thanimayai ariyaamalae.<br>
+
+Ninaivugal vilaiyaaduthae,<br>
+nijam adhu puriyaamalae.<br>
+Idhazhgalum thirakaamalae,<br>
+idhayangal inainthida uyir pizhidhidum.<br>
+Pogaathae azhagae,<br>
+ini thaangaathae uyirae.<br>
+Enai thondaathae thimirae,<br>
+pagal vesham podaathae.<br>
+Unai theeramal pidithen,<br>
+uyirin ullae maraithen,<br>
+veliyil konjam nadithenae...<br>
+
+Niraa,<br>
+niraa,<br>
+niraa,<br>
+niraa.<br>
+Nee en,<br>
+nee en,<br>
+niraa,<br>
+niraa.<br>
+Thiraa,<br>
+thiraa,<br>
+thiraa,<br>
+thiraa.<br>
+Ninai,<br>
+ninai,<br>
+thiraa,<br>
+thiraa.<br>
+Nodi sugam tharaa.<br>
+Tharaa!<br>
+Vazhi yugam vidaa.<br>
+
+Vidaa!<br>
+It's not her face,<br>
+it's something about her.<br>
+It's just being in the right place with her,<br>
+it's just the moment,<br>
+it's, it's everything about her man.<br>
+I don't know what to say,<br>
+it's just, every thing about her.<br>
+No, it's not her face,<br>
+it's beyond that.<br>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("{% static 'music_background.jpg'%}"); /* Replace with your image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container-3{
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      max-height: 350px;
+      overflow: auto;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      margin: 50px auto;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      line-height: 1.5;
+      background-image: linear-gradient(to right , rgba(190, 63, 245, 0.8),rgba(25, 53, 237, 0.8));
+    }
+    .container-3::-webkit-scrollbar {
+      display: none;
+    }
+    .container {
+      background-color: #c8cfd4;
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+      margin: 50px auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+    .lyrics{
+        padding-left: 620px;
+        text-align: left;
+      margin-top: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <audio controls>
+      <source src="{% static 'Believer.mp3'%}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="playPause()">Play/Pause</button>
+  </div>
+
+  <script>
+    var audio = document.getElementsByTagName("audio")[0];
+
+    function playPause() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+  <div class="container-3">
+    <p>
+        First things first<br>
+I'ma say all the words inside my head<br>
+I'm fired up and tired of the way that things have been, oh-ooh<br>
+The way that things have been, oh-ooh<br>
+Second thing second<br>
+Don't you tell me what you think that I could be<br>
+I'm the one at the sail, I'm the master of my sea, oh-ooh<br>
+The master of my sea, oh-ooh<br>
+I was broken from a young age<br>
+Taking my sulking to the masses<br>
+Writing my poems for the few<br>
+That look at me, took to me, shook to me, feeling me<br>
+Singing from heartache from the pain<br>
+Taking my message from the veins<br>
+Speaking my lesson from the brain<br>
+Seeing the beauty through the...<br>
+Pain!<br>
+You made me a, you made me a believer, believer<br>
+Pain!<br>
+You break me down and build me up, believer, believer<br>
+Pain!<br>
+Oh, let the bullets fly, oh, let them rain<br>
+My life, my love, my drive, it came from...<br>
+Pain!<br>
+You made me a, you made me a believer, believer<br>
+First things first<br>
+Can you imagine what's about to happen?<br>
+It's Weezy the Dragon, I link with the Dragons<br>
+And we gon' get ratchet, no need for imaginin'<br>
+This is what's happenin'<br>
+Second thing second, I reckon immaculate<br>
+Sound about accurate<br>
+I know that strength, it don't come, don't come without strategy<br>
+I know the sweet, it don't come without cavities<br>
+I know the passages come with some traffic<br>
+I start with from the basement, end up in the attic<br>
+And third thing third<br>
+Whoever call me out, they simply can't count<br>
+Let's get mathematic, I'm up in this, huh<br>
+Is you a believer?<br>
+I get a unicorn out of a zebra<br>
+I wear my uniform like a tuxedo<br>
+This dragon don't hold his breath, don't need no breather<br>
+Love you Ms. Cita, the son of a leader<br>
+I know the bloomin' don't come without rain<br>
+I know the losin' don't come without shame<br>
+I know the beauty don't come without hurt<br>
+Hol' up, hol' up, last thing last<br>
+I know that Tunechi don't come without Wayne<br>
+I know that losin' don't come without game<br>
+I know that glory don't come without...<br>
+Don't come without...<br>
+Pain!<br>
+You made me a, you made me a believer, believer<br>
+Pain!<br>
+You break me down and build me up, believer, believer<br>
+Pain<br>
+Oh, let the bullets fly, oh, let them rain<br>
+My life, my love, my drive, it came from...<br>
+Pain!<br>
+You made me a, you made me a believer, believer<br>
+Last things last<br>
+By the grace of fire and flames<br>
+You're the face of the future, the blood in my veins, oh-ooh<br>
+The blood in my veins, oh-ooh<br>
+But they never did, ever lived, ebbing and flowing<br>
+Inhibited, limited 'til it broke open and rained down<br>
+It rained down, like...<br>
+Pain!<br>
+You made me a, you made me a believer, believer<br>
+Pain!<br>
+You break me down and build me up, believer, believer<br>
+Pain<br>
+Oh, let the bullets fly, oh, let them rain<br>
+My life, my love, my drive, it came from...<br>
+Pain!<br>
+You made me a, you made me a believer, believer<br>
+
+    </p>
+  </div>
+</body>
+</html>

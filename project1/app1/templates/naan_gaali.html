@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("{% static 'music_background.jpg'%}"); /* Replace with your image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container-3{
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      max-height: 350px;
+      overflow: auto;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      margin: 50px auto;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      line-height: 1.5;
+      background-image: linear-gradient(to right , rgba(190, 63, 245, 0.8),rgba(25, 53, 237, 0.8));
+    }
+    .container-3::-webkit-scrollbar {
+      display: none;
+    }
+    .container {
+      background-color: #c8cfd4;
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+      margin: 50px auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+    .lyrics{
+        padding-left: 620px;
+        text-align: left;
+      margin-top: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <audio controls>
+      <source src="{% static 'Naan_Gaali.mp3'%}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="playPause()">Play/Pause</button>
+  </div>
+
+  <script>
+    var audio = document.getElementsByTagName("audio")[0];
+
+    function playPause() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+  <div class="container-3">
+    <p>
+        Naan Gaali Naan Gaali<br>
+Mothama Serthu<br>
+Ippo Naan Gaali<br>
+
+Balcony Kaathula<br>
+Vaasam Dhaan Kooduthae Ho<br>
+Mohan Uh Life’la<br>
+Nightingale Paadutho<br>
+
+Kanavilum Nenaikala<br>
+Vaazhkka Thaan Maaruthu Ho<br>
+Kaipidi Idukula<br>
+Kadhalum Erudhu<br>
+
+Naan Gaali Naan Gaali<br>
+Mothama Serthu<br>
+Ippo Naan Gaali<br>
+
+Naan Gaali Naan Gaali<br>
+Mothama Serthu<br>
+Ippo Naan Gaali<br>
+
+Ra Ra Ra… Ra Ra Ra…<br>
+Veyil Kaathu Eeram Dhaan<br>
+Ra Ra Ra…<br>
+Neeyum Vandha Neram Dhaan<br>
+Aa Aa Aa..<br>
+
+Veyil Kaathu Eeram Dhaan<br>
+Veyil Kaathu Eeram Dhaan<br>
+Mounam Kooda Ragam Dhaan<br>
+Kaadhal Pesa Dhaan<br>
+
+Heart’uh Rate’uh Yearuthae<br>
+Pulse’uh Rap’uh Paaduthe<br>
+Fuse’uh Pona Life’laium<br>
+Bulb’uh Bright’h Aaguthae<br>
+Azha Thonudhe<br>
+
+Naan Gaali Naan Gaali<br>
+Mothama Serthu<br>
+Ippo Naan Gaali<br>
+
+Naan Gaali Naan Gaali<br>
+Mothama Serthu<br>
+Ippo Naan Gaali<br>
+
+Ra Ra Ra…<br>
+
+Ra Ra Ra… Ra Ra Ra…<br>
+Neram Enga Pogumo<br>
+Ra Ra Ra…<br>
+Neeyum Naanum Pesuna<br>
+Aa Aa Aa…<br>
+
+Neram Enga Pogumo<br>
+Neeyum Naanum Pesuna<br>
+Varthai Theeirndhu Pogumo<br>
+Un Parvai Pesuna<br>
+
+Aari Pona Tea’layum<br>
+Story Nooru Pookuthe<br>
+Saalai Oorom Traffic’um<br>
+Raja Naanga Kekuthe<br>
+Aale Thookuthe<br>
+
+Balcony Kaathula<br>
+Vaasam Dhaan Kooduthae Ho<br>
+Mohan Uh Life’la<br>
+Nightingale Paadutho<br>
+
+Kanavilum Nenaikala<br>
+Vaazhkka Thaan Maaruthu Ho<br>
+Kaipidi Idukula<br>
+Kadhalum Erudhu<br>
+
+Naan Gaali Naan Gaali<br>
+Mothama Serthu<br>
+Ippo Naan Gaali<br>
+
+Naan Gaali Naan Gaali<br>
+Mothama Serthu<br>
+Ippo Naan Gaali<br>
+
+    </p>
+  </div>
+</body>
+</html>

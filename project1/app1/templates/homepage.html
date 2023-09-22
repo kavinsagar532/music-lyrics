@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {%load static%}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" type="imag/x-icon" href="gitlogo.png" sizes="100px">
+    <style>
+      @import url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASsAAACoCAMAAACPKThEAAAAKlBMVEUeHh4KCgogICAcHBwHBwcSEhIMDAwWFhYZGRkTExMYGBgDAwMjIyMAAADQtvE8AAADfklEQVR4nO3c3W6jMBCGYXv8S6D3f7vrwZiQBNjsSWHl91GltLQH6JM9jMHUGAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAJSL14+oT+Q/UrISsviDN1Sdya1KDMk7Vbw2J7RKtUSlY65W1IekBwtolyWpGq/JDIqo9mpR9R1pvdKJJ/sipyfPvrz7Jm9Akgv8cVG0mBrJ6EhMPR5WKRFXp5S8eDaplaEVGltIIToOqI4vuoXAiYecCuBcWZKhJpfRR32Op6ynVaTiQlRG3DhxxOsK8fs0fJaAy6mQJzhGWLJfAMK8GXQgpz8dzGqLG48oUXcK8+EwvJ3mscyyVoOYDLRKpB8oSsWY15t7DasPKHtajVs96H1jiXCvn4TCr0Eq967tkSViy8vYwq/WyeBhnH9YgxsdhVktFK3n2nVWbgv5szKxjz/3eid2PpFauTkpR68D0WvmL53Y3a92Ox8u90ju0a2XXBWuTwuF6T2SbaL/I6nvrZfC7rA77ih6sWQ1nt1zISq1Znc8usjIvWZ31TpGsNrPLn/ZXf10z9kDSF23ms2Htuhdd1zjWH/eiZv2brtc4Zs3haH6VjmFY/+aXz+1mloKlaYTpcwdR+XkKvpX2vlvR5zYGv/90WczmMWvu+hmh1OeoyQ1zXiFv9vPpt4/wTCp23TGo+SIX244G72MwbWtteNmNFfu+IzMTHTE+r1U+1Ykmz36ima4+1cvJw9eWYf6M3rQKL/KSlO/+kZeZH09EvYdcxtE4bu8lP5fM9i83mfshVsOaS9TLnZlnVlrLpO8HXot6P/1zI4xsNrCdrRf7oisdb3VL++T25+CFJ3cvS5c174yJm8PrTQjLOwErMS6OH8vClpWPna+Zt+bdRHWF/Dqu/HIFZAPkq2XlF9/G1cge5E/ztj6/3epYhlqZfrzwtUdTebwcSbxxCeCWZK1Oy/uo7QDt1RuRFJLkIFm0pic3vwmXBsr7juhTCM650ciPk3oXdArBsGp+U1Y5o7ZSQyzNuhuHbFOKk3eDjSwG34n7EW9TDsaL8THY9LBi8xCm4123/RrzFFOOmtWPmUpWZVzlULLKV5/Z7chjLBVriGJtLsXKJuejz7qiZuH8Sdz8zytcvQLq2zhawZxw93iXLDnp612G3uqc1A7U1febGU8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgH/0B5YpDsO0mJPsAAAAAElFTkSuQmCC");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+::selection {
+  color: #000;
+  background: #fff;
+}
+nav {
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  position: relative;
+  left: -6em;
+}
+.menu ul {
+  display: inline-flex;
+}
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child {
+  margin-left: 0px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover {
+  background: #fff;
+  color: black;
+}
+.img {
+  background: url("{% static 'background.png'%}") no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+.center .para {
+  color:#7D8590;
+  font-size: 23px;
+  font-weight: 200;
+}
+.center .btns {
+  margin-top: 20px;
+}
+.center .btns button {
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .btns button:first-child {
+  color: #fff;
+  background: none;
+}
+.btns button:first-child:hover {
+  background: white;
+  color: black;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <div class="logo">
+          <a href="#" s>Music and Lyrics</a>
+        </div>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Signup</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="img"></div>
+    <div class="center">
+      <div class="title">Hear and Enjoy the Song</div>
+      <div class="sub_title">Understand the Song with Lyrics</div>
+      <div class="btns">
+        <a href="first.html"><button>Get Started</button></a>
+      </div>
+    </div>
+  </body>
+</html>

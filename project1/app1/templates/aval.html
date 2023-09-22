@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("{% static 'music_background.jpg'%}"); /* Replace with your image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container-3{
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      max-height: 350px;
+      overflow: auto;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      margin: 50px auto;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      line-height: 1.5;
+      background-image: linear-gradient(to right , rgba(190, 63, 245, 0.8),rgba(25, 53, 237, 0.8));
+    }
+    .container-3::-webkit-scrollbar {
+      display: none;
+    }
+    .container {
+      background-color: #c8cfd4;
+      border: 2px solid #333;
+      border-radius: 20px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+      margin: 50px auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+    .lyrics{
+        padding-left: 620px;
+        text-align: left;
+      margin-top: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <audio controls>
+      <source src="{% static 'Aval.mp3'%}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="playPause()">Play/Pause</button>
+  </div>
+
+  <script>
+    var audio = document.getElementsByTagName("audio")[0];
+
+    function playPause() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+  <div class="container-3">
+    <p>
+        Aval Kuzhal Uthirthidum<br>
+        Izhai Enai Thulaithidum<br>
+        Idai Veli Mulaithidum Neram<br>
+        Uyire Nadai Thidum<br>
+        Aval Ithazh Thiranditum<br>
+        
+        Mazhai Enil Therithidum<br>
+        Suzhal Ena Suzhattridum Nenjai<br>
+        Suzhattridum....<br>
+        
+        Azhakazhaka Ava Theriva<br>
+        Uyire Uriva<br>
+        Methu Methuva Viri Viriva<br>
+        Vizhi Ariva<br>
+        
+        Enakkaanavalae Neethaan Kitta Variya<br>
+        Therinja Senchaen Mannippae Kidaiyaatha<br>
+        Udane Enna Uthari Pona Sariya<br>
+        Inime Naanum Uyirum Ada Thaniya<br>
+        
+        
+        En Sogame En Mogame<br>
+        Engaeyo Tholanjavalae<br>
+        En Varame En Nirame<br>
+        
+        Yaezhaaga Valanjavalae3<br>
+        Kaalam Poguthe Kadikaaram Oduthe<br>
+        Unna Maathirukkum Neram Eppo<br>
+        Vaatham Pannuna Pidivaatham Pannura<br>
+        Thirunthaatha Naanthaan Thappo<br>
+        
+        Pada Padakkum Kannaala<br>
+        Ena Meratti Konjam Maathitta<br>
+        Manasodanju Pogaatha<br>
+        Un Veral Pidichu Naan Karai Yaeruvaen<br>
+        
+        
+        En Sogame En Mogame<br>
+        Engaeyo Tholanjavalae<br>
+        En Varame Èn Nirame<br>
+        Yaezhaaga Valanjavalae<br>
+        
+        
+        Azhakazhaka Ava Theriva<br>
+        Uyire Uriva<br>
+        
+        Methu Methuva Viri Viriva<br>
+        Vizhi Ariva<br>
+        Udane Ènna Uthari Pøna Šariya<br>
+        Inime Naanum Uyirum Ada Thaniya<br>
+        Èn Šøgame Èn Møgame<br>
+        Èngaeyø Thølanjavalae<br>
+        Èn Varame Èn Nirame<br>
+        Yaezhaaga Valanjavalae....<br>
+    </p>
+  </div>
+</body>
+</html>
