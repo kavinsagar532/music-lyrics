@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ol@po@q@flt#5am_*hjp61#cge2$8#77djz1l7ml^ok&gevi+z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 GENIUS_CLIENT_ID = 'W8HneZRMBtiJNGhK-oZNXgqEmdYijWEq5NrayC-_5Gvh4T7Fqq9w8TchZAUM-zgw'
 GENIUS_CLIENT_SECRET = 'FdLaRvuxsGj128oSxA6lSdGYfrleoErV8I8HYcZ8pEiAhlfBo0JFWkFjQGHPzPZ_7PiFbYCRHhFbfE38w8Rm4g'
